@@ -14,11 +14,10 @@ import com.seven.fitz.admin.service.AdminColorService;
 import com.seven.fitz.entity.Color;
 
 import jakarta.servlet.http.HttpSession;
-import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/admin/product/colors")
-@RequiredArgsConstructor
+
 public class AdminColorController {
 
     private final AdminColorService colorService;

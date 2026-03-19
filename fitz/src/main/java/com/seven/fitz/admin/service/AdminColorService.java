@@ -7,10 +7,8 @@ import org.springframework.stereotype.Service;
 import com.seven.fitz.entity.Color;
 import com.seven.fitz.repository.ColorRepository;
 
-import lombok.RequiredArgsConstructor;
 
 @Service
-@RequiredArgsConstructor
 public class AdminColorService {
 
     private final ColorRepository colorRepository;
