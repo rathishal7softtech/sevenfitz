@@ -52,9 +52,13 @@ public class AdminCategoryController {
 	}
 	
 	@PutMapping(value= "/edit/{id}",consumes=MediaType.MULTIPART_FORM_DATA_VALUE)
-	public EditCategoryResponse update(@PathVariable Long id, @ModelAttribute AddCategoryRequest request,
+	public EditCategoryResponse update(@RequestParam("ID") Long id,  @RequestParam("title") String title,
+		    @RequestParam("description") String description,
 	        @RequestPart(value = "image", required = false) MultipartFile image,HttpSession session)
 	{
+		AddCategoryRequest request = new AddCategoryRequest();
+	    request.setTitle(title);
+	    request.setDescription(description);
 		return categoryservice.update(id,request, image);
 	}
 	@GetMapping(value="/page")
